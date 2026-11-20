@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 先看进度表
+    url: https://github.com/xiaoming135133/jiangjieshicangku/blob/main/docs/05-进度与里程碑.md
+    about: 不确定该做什么时，先看本周的勾选表再开工
+  - name: 用 git 遇到问题
+    url: https://github.com/xiaoming135133/jiangjieshicangku/blob/main/docs/git-常用命令.md
+    about: 常见翻车与救法都在这里，翻一遍通常就有答案

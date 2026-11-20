@@ -1,0 +1,55 @@
+name: 任务
+description: 一周内的可交付任务，写完就能直接开工
+title: "[W?] "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        标题格式：`[W4] 候选生成三路并行`
+        一条任务只写一件事；能在一周内做完、且有可判断的验收标准。
+  - type: input
+    id: goal
+    attributes:
+      label: 目标
+      description: 做完之后，什么变了？
+      placeholder: 新照片进来时，能给出三种候选节点而不是一个
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收标准
+      description: 别人怎么判断这条做完了？写数字，别写"基本可用"。
+      placeholder: |
+        1. 输入 20 张照片，每张输出 ≥ 3 个候选
+        2. 符号路召回在 5 个样例上命中正确节点
+    validations:
+      required: true
+  - type: dropdown
+    id: week
+    attributes:
+      label: 所属周次
+      options:
+        - W1 定题与数据
+        - W2–W3 识别链路
+        - W4–W5 对齐与树
+        - W6–W7 检索与网页
+        - W8 错题与试用
+        - W9 提交
+    validations:
+      required: true
+  - type: input
+    id: refs
+    attributes:
+      label: 关联文档
+      description: 对应计划书哪一节
+      placeholder: docs/02-技术方案.md §2.3.1
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: 完成定义
+      options:
+        - label: 有 PR 合入 main，且自己看过 diff
+        - label: 相关文档/进度表已同步更新
+        - label: 如果有实测数字，已回填 docs/06-评测集与指标.md

@@ -1,0 +1,68 @@
+# ---- 系统与编辑器 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# ---- Android / Kotlin / Gradle ----
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+.gradle/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+*.jks
+*.keystore
+signing.properties
+output.json
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+
+# ---- Node（网页整理台，后期会用） ----
+node_modules/
+.pnpm-store/
+
+# ---- 环境与密钥：一律不进仓库 ----
+.env
+.env.*
+!.env.example
+*.pem
+config/secrets.*
+
+# ---- 本地数据：真实板书照片、导出物、临时实验 ----
+# 照片体积大且含隐私，只提交标注 CSV 与指标汇总
+data/
+photos/
+raw/
+exports/
+tmp/
+*.log
+
+# ---- Office 临时文件 ----
+~$*
+
+# 说明：本项目文档一律用 Markdown。
+# 如确有二进制文档（docx/pptx）需要入库，请先转成 Markdown；
+# 实在要保留原件，放 Releases 或网盘，不要提交到 git 历史里。
+# *.docx
+# *.pptx
